@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor LogIn - MediBook</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/stylesheets/docLogin.css">
+    <link rel="stylesheet" href="/stylesheets/navbar.css">
+</head>
+
+<body>
+    <%- include('partials/navbar') %>
+    <div class="container">
+        <div class="box">
+            <span class="icons"><i class="ri-nurse-fill"></i></span>
+            <h2>Doctor Login</h2>
+            <form action="/api/v1/login" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Create a password">
+                </div>
+                <button type="submit" class="signup-btn">LogIn</button>
+                <p class="login-link">Don't have an account? <a href="/doctorSignup">Signup</a></p>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/javascripts/navbar.js"></script>
+
+</body>
+
+</html>

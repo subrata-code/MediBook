@@ -1,30 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="/stylesheets/index.css">
-  </head>
-  <body>
-    <main>
-      <nav>
-        <div id="nav-left">
-          <a href="/">
-            <h1>MediCon</h1>
-          </a>
-        </div>
 
-        <div id="nav-right">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/service">Service</a></li>
-            <li><a href="/links">Quick Links</a></li>
-            <li><button>Login</button></li>
-          </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medicon</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/stylesheets/index.css" />
+  <link rel="stylesheet" href="/stylesheets/navbar.css" />
+  <link rel="stylesheet" href="/stylesheets/footer.css" />
+</head>
+
+<body>
+  <main>
+    <!-- navbar section  -->
+    <%- include('partials/navbar') %>
+    <!-- hero section  -->
+    <section id="hero">
+
+      <div id="hero-left">
+        <h1 class="welcome-title">Welcome to <span class="typewriter-title"><span>MEDICON</span></span></h1>
+        <p class="welcome-subtitle">
+          <span class="typewriter-subtitle">Connect with top medical professionals at the click of a button. 
+                 Schedule appointments, manage your visits, and stay on top of your healthcare needs with ease.</span>
+        </p>
+        <a href="/logindashboard" class="get-started-button"><button>Get Started</button></a>
+      </div>
+
+      <div id="hero-right">
+        <img class="doctor-illustration" src="/assets/hero-sec.svg" alt="hero" />
+      </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section class="feature-section">
+      <div class="feature-container">
+        <div class="feature-card">
+          <span class="icons"><i class="ri-hospital-line"></i></span>
+          <h3>AI Health Diagnosis</h3>
+          <p>Cutting-edge AI technology for accurate health diagnostics.</p>
         </div>
-      </nav>
-    </main>
-    <script src="/javascripts/index.js"></script>
-  </body>
+        <div class="feature-card">
+          <span class="icons"><i class="ri-calendar-fill"></i></span>
+          <h3>Appointment Booking</h3>
+          <p>Easy and efficient appointment booking system.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icons"><i class="ri-time-fill"></i></span>
+          <h3>24/7 Support</h3>
+          <p>Round-the-clock customer support for all your queries.</p>
+        </div>
+        <div class="feature-card">
+          <span class="icons"><i class="ri-heart-fill"></i></span>
+          <h3>Personalized Health Plans</h3>
+          <p>Customized health plans tailored to individual needs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-section">
+      <div class="premium-header">
+        <span>
+          <i class="ri-gemini-fill"></i>
+        </span>
+        Premium Features
+        <span>
+          <i class="ri-gemini-fill"></i>
+        </span>
+      </div>
+      <div class="premium-container">
+        <div class="premium-card">
+          <h3>Advanced Diagnostics</h3>
+          <p>
+            Get detailed health diagnostics with our premium AI technology.
+          </p>
+        </div>
+        <div class="premium-card">
+          <h3>Priority Support</h3>
+          <p>Enjoy expedited support with dedicated priority service.</p>
+        </div>
+        <div class="premium-card">
+          <h3>Exclusive Health Plans</h3>
+          <p>
+            Access exclusive, tailored health plans designed for optimal care.
+          </p>
+        </div>
+        <div class="premium-card">
+          <h3>Personal Health Coach</h3>
+          <p>
+            Work with a personal health coach to achieve your wellness goals.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section -->
+        <%- include('partials/footer') %>
+  </main>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/javascripts/index.js"></script>
+  <script src="/javascripts/navbar.js"></script>
+</body>
+
 </html>
